@@ -2,7 +2,9 @@ from human import Human
 from ai import AI
 
 human_1 = Human()
-computer_1 = AI()
+human_2 = Human()
+johnny_5 = AI()
+robocop = AI()
 # human_1.gestures_list
 # for gesture in human_1.gestures_list:
 #     print(gesture)
@@ -16,11 +18,33 @@ class Gameboard:
     def run_games(self):
         self.display_welcome()
         self.set_game_mode()
+        if self.game_mode == 'hvh':
+            human_1.set_name()
+            human_2.set_name()
+            print(f"Get ready to rumble {human_1.name} and {human_2.name}!")
+        elif self.game_mode == 'hva':
+            human_1.set_name()
+            print(f"Get ready to rumble {human_1.name} and {johnny_5}!")
+        elif self.game_mode == 'ava':
+            print(f"Get ready to rumble {johnny_5} and {robocop}!")
+    
 
+    
+    def human_1_turn(self):
+        Human.choose_gesture()
 
+    def human_2_turn(self):
+        Human.choose_gesture()
+    
+    def johnny_5_turn(self):
+        AI.choose_gesture()
 
+    def robocop_turn(self):
+        AI.choose_gesture()
+    
+    def compare_gestures(self):
+        pass
 
-    # Display welcome
     def display_welcome(self):
         print("Welcome to RPSLS!!!")
 
@@ -41,7 +65,7 @@ class Gameboard:
             else:
                 print("Choose Again")
 
-    # Choose your name
+    
     
 
     
