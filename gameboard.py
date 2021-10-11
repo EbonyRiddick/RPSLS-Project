@@ -19,7 +19,10 @@ class Gameboard:
         self.display_welcome()
         self.set_game_mode()
         self.initialize_players()
-        
+        while self.player_1.player_score < 2 and self.player_2.player_score < 2:
+            self.player_1.choose_gesture()
+            self.player_2.choose_gesture()
+
         
     
     def player_1_turn(self):
@@ -53,7 +56,7 @@ class Gameboard:
 
         
     def compare_gestures(self):
-        if 
+       pass
 
     def display_welcome(self):
         print("Welcome to RPSLS!!!")
