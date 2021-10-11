@@ -24,10 +24,10 @@ class Gameboard:
         
     
     def player_1_turn(self):
-        self.player_1.choose_gesture()
+        self.player_1.gestures()
 
     def player_2_turn(self):
-        self.player_2.choose_gesture()
+        self.player_2.gestures()
     
     
     def initialize_players(self):
