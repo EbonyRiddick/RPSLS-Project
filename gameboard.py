@@ -1,10 +1,8 @@
 from human import Human
 from ai import AI
+from player import Player
 
-human_1 = Human()
-human_2 = Human()
-johnny_5 = AI()
-robocop = AI()
+
 # human_1.gestures_list
 # for gesture in human_1.gestures_list:
 #     print(gesture)
@@ -14,36 +12,48 @@ robocop = AI()
 class Gameboard:
     def __init__(self):
         self.game_mode = ''
+        self.player_1 = Player()
+        self.player_2 = Player()
 
     def run_games(self):
         self.display_welcome()
         self.set_game_mode()
+        self.initialize_players()
+        
+        
+    
+    def player_1_turn(self):
+        self.player_1.choose_gesture()
+
+    def player_2_turn(self):
+        self.player_2.choose_gesture()
+    
+    
+    def initialize_players(self):
         if self.game_mode == 'hvh':
-            human_1.set_name()
-            human_2.set_name()
-            print(f"Get ready to rumble {human_1.name} and {human_2.name}!")
+            player_1 = Human()
+            player_2 = Human()
+            player_1.set_name()
+            player_2.set_name()
+            self.player_1 = player_1
+            self.player_2 = player_2
+            print(f"Get ready to rumble {player_1.name} and {player_2.name}!")
         elif self.game_mode == 'hva':
-            human_1.set_name()
-            print(f"Get ready to rumble {human_1.name} and {johnny_5}!")
+            player_1 = Human()
+            player_2 = AI()
+            player_1.set_name()
+            player_2.set_name()
+            print(f"Get ready to rumble {player_1.name} and {player_2.name}!")
         elif self.game_mode == 'ava':
-            print(f"Get ready to rumble {johnny_5} and {robocop}!")
-    
+            player_1 = AI()
+            player_2 = AI()
+            player_1.set_name()
+            player_2.set_name()
+            print(f"Get ready to rumble {player_1.name} and {player_2.name}!")
 
-    
-    def human_1_turn(self):
-        Human.choose_gesture()
-
-    def human_2_turn(self):
-        Human.choose_gesture()
-    
-    def johnny_5_turn(self):
-        AI.choose_gesture()
-
-    def robocop_turn(self):
-        AI.choose_gesture()
-    
+        
     def compare_gestures(self):
-        pass
+        if 
 
     def display_welcome(self):
         print("Welcome to RPSLS!!!")
