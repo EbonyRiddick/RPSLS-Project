@@ -3,12 +3,6 @@ from ai import AI
 from player import Player
 
 
-# human_1.gestures_list
-# for gesture in human_1.gestures_list:
-#     print(gesture)
-# human_1.choose_gesture()
-# # computer_1.choose_gesture()
-
 class Gameboard:
     def __init__(self):
         self.game_mode = ''
@@ -56,7 +50,43 @@ class Gameboard:
 
         
     def compare_gestures(self):
-       pass
+        while self.player_1.gestures == self.player_2.gestures:
+            print("IT'S A TIE \nno point awarded try again")
+            if self.player_1.gestures == 'rock' and self.player_2.gestures == 'scissors':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'scissors' and self.player_2.gestures == 'paper':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'paper' and self.player_2.gestures == 'rock':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'rock' and self.player_2.gestures == 'lizard':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'lizard' and self.player_2.gestures == 'spock':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures =='spock' and self.player_2.gestures == 'scissors':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'scissors' and self.player_2.gestures == 'lizard':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'lizard' and self.player_2.gestures == 'paper':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'paper' and self.player_2.gestures == 'spock':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            elif self.player_1.gestures == 'spock' and self.player_2.gestures == 'rock':
+                self.player_1.player_score += 1
+                print(f'{self.player_1.name} gets the point! \n{self.player_1.player_score}')
+            else:
+                self.player_2.player_score += 1
+                print(f'{self.player_2.name} gets the point! \n{self.player_2.player_score}')
+
+
 
     def display_welcome(self):
         print("Welcome to RPSLS!!!")
