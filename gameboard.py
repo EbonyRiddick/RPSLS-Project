@@ -13,11 +13,12 @@ class Gameboard:
         self.display_welcome()
         self.set_game_mode()
         self.initialize_players()
-        while (self.player_1.player_score < 2) and (self.player_2.player_score < 2):
+        while (self.player_1.player_score < 3) and (self.player_2.player_score < 3):
             self.player_1.choose_gestures()
             self.player_2.choose_gestures()
             self.compare_gestures()
             self.show_score()
+            self.display_winner()
             
             
     
@@ -89,7 +90,10 @@ class Gameboard:
         print("Welcome to RPSLS!!!")
 
     def display_winner(self):
-        pass
+        if self.player_1.player_score >= 3:
+            print(f'{self.player_1.name} has won the game!')
+        elif self.player_2.player_score >= 3:
+            print(f'{self.player_2.name} has won the game!')
 
     def set_game_mode(self):
         user_input = ''
