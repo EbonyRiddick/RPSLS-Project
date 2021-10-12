@@ -52,34 +52,34 @@ class Gameboard:
     def compare_gestures(self):
         if self.player_1.gestures == self.player_2.gestures:
             print("IT'S A TIE \nno point awarded try again")
-        elif self.player_1.gestures == 'Rock' and self.player_2.gestures == 'Scissors':
+        elif self.player_1.gestures == 'rock' and self.player_2.gestures == 'scissors':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Scissors' and self.player_2.gestures == 'Paper':
+        elif self.player_1.gestures == 'scissors' and self.player_2.gestures == 'paper':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
         elif self.player_1.gestures == 'Paper' and self.player_2.gestures == 'Rock':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Rock' and self.player_2.gestures == 'Lizard':
+        elif self.player_1.gestures == 'rock' and self.player_2.gestures == 'lizard':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Lizard' and self.player_2.gestures == 'Spock':
+        elif self.player_1.gestures == 'lizard' and self.player_2.gestures == 'spock':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures =='Spock' and self.player_2.gestures == 'Scissors':
+        elif self.player_1.gestures =='spock' and self.player_2.gestures == 'scissors':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Scissors' and self.player_2.gestures == 'Lizard':
+        elif self.player_1.gestures == 'scissors' and self.player_2.gestures == 'lizard':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Lizard' and self.player_2.gestures == 'Paper':
+        elif self.player_1.gestures == 'lizard' and self.player_2.gestures == 'paper':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Paper' and self.player_2.gestures == 'Spock':
+        elif self.player_1.gestures == 'paper' and self.player_2.gestures == 'spock':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
-        elif self.player_1.gestures == 'Spock' and self.player_2.gestures == 'Rock':
+        elif self.player_1.gestures == 'spock' and self.player_2.gestures == 'rock':
             self.player_1.player_score += 1
             print(f'{self.player_1.name} gets the point!')
         else:
