@@ -14,8 +14,8 @@ class Gameboard:
         self.set_game_mode()
         self.initialize_players()
         while (self.player_1.player_score < 2) and (self.player_2.player_score < 2):
-            self.player_1.choose_gesture()
-            self.player_2.choose_gesture()
+            self.player_1.choose_gestures()
+            self.player_2.choose_gestures()
             self.compare_gestures()
             
             
