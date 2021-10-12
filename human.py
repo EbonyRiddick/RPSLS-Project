@@ -10,6 +10,11 @@ class Human(Player):
             prompt += (f'{gesture}\n')
         self.gestures = input(prompt)
 
-       
-    
+        while self.gestures not in self.gestures_list:
+            print(f"Invalid gesture, please choose again! ")
+            self.choose_gestures()
+
+
+
+   
 
